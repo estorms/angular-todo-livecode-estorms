@@ -11,7 +11,7 @@ app.controller("ItemViewCtrl", function ($scope, ItemStorage, $routeParams ){
 
     //Create empty array to hold objects we collect from the Item Storage factory
 
-    ItemStorage.getItemList() //Controller told to retrieve item list from factory
+    ItemStorage.getItemList($scope.$parent.getUser()) //Controller told to retrieve item list from factory
 
     .then( (itemCollectionArr) => { // Once we have the list (itemCollectionArr), we equate it with the $scope.items array
 
