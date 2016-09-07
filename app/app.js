@@ -1,6 +1,6 @@
 "use strict";
 var app = angular.module("TodoApp", ["ngRoute"])
-.constant('FirebaseURL','https://angular-practice-todo.firebaseio.com/');
+.constant('FirebaseURL','https://todo-list-67408.firebaseio.com/');
 //Module takes two arguments: name and array of dependencies
 //Module has pseudo-global scope
 //Controllers (functions) have local/lexical scope

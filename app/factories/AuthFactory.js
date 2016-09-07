@@ -3,8 +3,9 @@
 app.factory("AuthFactory", function($q) {
   let createUser = function(userObj) {
     //need to return a promise - the new firebase 3 has promise return built in already - method, auth() - method - get login user, create new users, sign out users
-    return firebase.auth().createUserWithEmailAndPassword(userObj.email, userObj.password)
+    return firebase.auth().createUserWithEmailAndPassword(userObj.email, userObj.password) //here we create our own method on a built-in FB method (auth) //CAN ONLY PASS IN TWO ARGUMENTS HERE
     //this will automatically return a promise
+    //returning a promise, but we don't have to write it, because they're already embedded as Firebase methods. We have universal access to firebase through link in index.html
       .catch(function(error){
         let errorCode = error.code;
         let errorMessage = error.message;

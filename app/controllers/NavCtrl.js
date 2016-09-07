@@ -14,3 +14,5 @@ app.controller("NavCtrl", function($scope, searchTermData, $location) {
 
     $scope.isActive = (viewLocation) => viewLocation === $location.path();
 });
+
+/// Because NavCtrl is nested within TopCtrl, we can access something on the scope in TopCtrl from $parent.
